@@ -134,20 +134,12 @@ const ContactForm: React.FC = () => {
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle size={40} className="text-green-500" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                🎉 Congratulations {formData.fname}!
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                {t('contact.success.title')}
               </h3>
-              <div className="space-y-4 mb-8">
-                <p className="text-lg text-gray-700">
-                  You've taken the first step towards transforming your trading journey!
-                </p>
-                <p className="text-gray-600">
-                  Our team of experts will review your application and contact you within the next <span className="font-semibold">24 hours</span> to discuss your personalized trading strategy.
-                </p>
-                <p className="text-gray-600">
-                  Keep an eye on your email <span className="font-semibold">({formData.email})</span> for important information about your account setup.
-                </p>
-              </div>
+              <p className="text-gray-600 mb-6">
+                {t('contact.success.message')}
+              </p>
               <button 
                 onClick={() => {
                   setIsSubmitted(false);
@@ -155,7 +147,7 @@ const ContactForm: React.FC = () => {
                 }}
                 className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
-                Submit Another Application
+                {t('contact.success.newMessage')}
               </button>
             </div>
           ) : (
